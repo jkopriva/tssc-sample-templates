@@ -198,6 +198,7 @@ spec:
       action: fetch:template
       input:
         url: ./content
+        cookiecutterCompat: true
         values:
           name: ${{ parameters.name }}
           namespace: ${{ parameters.namespace }}
@@ -210,6 +211,7 @@ spec:
       action: fetch:template
       input:
         url: ../../skeleton/source-repo
+        cookiecutterCompat: true
         values:
           name: ${{ parameters.name }}
           namespace: ${{ parameters.namespace }}
@@ -234,6 +236,7 @@ spec:
       action: fetch:template
       input:
         url: ../../skeleton/ci/source-repo/${{ parameters.ciType}}
+        cookiecutterCompat: true
         copyWithoutRender:
           - .github/workflows/*
         values:
